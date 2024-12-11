@@ -19,9 +19,9 @@ pipeline {
                     iniciarMongo = bat( label: '', returnStdout: true, script: 'start cmd /k "C:\\MongoDB\\bin\\mongod.exe"')
                     iniciarServicio = bat( label: '', returnStdout: true, script: 'start cmd /k "node C:\\Users\\Admin\\Desktop\\Repositorio\\server.js --entorno=dev"')
                     //echo bat(label: '', returnStdout: true, script: 'npm install -g mocha & npm install -g mochawesome')
-                    pruebasUI = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & C:\\Users\\Admin\\AppData\\Roaming\\npm\\mocha --timeout 60000 --reporter mochawesome "tests\\escuela\\escuelas.ui.test.js"')
-                    pruebasAPI = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & npx jest escuelas.api')
-                    pruebasComponentes = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & npx jest nuevaEscuela')
+                    pruebasUI = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & C:\\Users\\Admin\\AppData\\Roaming\\npm\\mocha --timeout 60000 --reporter mochawesome "tests\\store\\newStore.ui.test.js"')
+                    pruebasAPI = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & npx jest newStore.api')
+                    pruebasComponentes = bat(label: '', returnStdout: true, script: 'cd C:\\Users\\Admin\\Desktop\\Repositorio & npx jest newStore')
                 }
             }
         }
